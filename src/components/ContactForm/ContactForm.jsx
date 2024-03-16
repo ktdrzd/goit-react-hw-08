@@ -4,7 +4,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/operations';
+// import { addContact } from '../../redux/operations';
+import { addContact } from '../../redux/contacts/operations';
 
 const validation = Yup.object().shape({
   name: Yup.string().min(3, 'Too short!').max(50, 'Too long!').required('Required!'),

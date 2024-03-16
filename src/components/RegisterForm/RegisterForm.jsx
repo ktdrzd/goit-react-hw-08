@@ -71,6 +71,7 @@ const RegisterForm = () => {
     name: '',
     email: '',
     password: '',
+    confirmPassword: '',
   };
 
   const ColorButton = styled(Button)(({ theme }) => ({

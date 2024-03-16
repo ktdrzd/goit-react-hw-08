@@ -6,9 +6,11 @@ import DocumentTitle from '../components/DocumentTitle/DocumentTitle';
 import Loader from '../components/Loader/Loader';
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 import ContactForm from '../components/ContactForm/ContactForm';
-import SearchBox from '../components/SearchBox/SearchBox';
+// import SearchBox from '../components/SearchBox/SearchBox';
+import SearchBar from '../components/SearchBar/SearchBar';
 import ContactList from '../components/ContactList/ContactList';
-import DeleteModal from '../components/DeleteModal/DeleteModal';
+import { DeleteModal } from '../components/DeleteModal/DeleteModal';
+// import DeleteModal from '../components/DeleteModal/DeleteModal';
 import PatchModal from '../components/PatchModal/PatchModal';
 import toast from 'react-hot-toast';
 
@@ -118,7 +120,7 @@ export default function ContactsPage() {
       {load && <Loader />}
       {error && <ErrorMessage />}
       <ContactForm />
-      <SearchBox />
+      <SearchBar />
       <ContactList openDeleteModal={openDeleteModal} openPatchModal={openPatchModal} />
       {selectedItem && (
         <DeleteModal

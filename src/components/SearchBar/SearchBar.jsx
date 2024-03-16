@@ -2,9 +2,9 @@ import { useId } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterNameNumber } from '../../redux/contacts/filterSlice';
 import { selectFilter } from '../../redux/contacts/selectors';
-import css from './SearchBox.module.css';
+import css from './SearchBar.module.css';
 
-const SearchBox = () => {
+const SearchBar = () => {
   const dispatch = useDispatch();
   const handleChange = evt => dispatch(filterNameNumber(evt.target.value));
   const value = useSelector(selectFilter);
@@ -18,4 +18,4 @@ const SearchBox = () => {
   );
 };
 
-export default SearchBox;
+export default SearchBar;

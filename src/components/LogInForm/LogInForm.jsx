@@ -4,12 +4,11 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import { logIn } from '../../redux/auth/operations';
-// import { login } from '../../redux/auth/operations';
 import ButtonLoader from '../ButtonLoader/ButtonLoader';
-// import css from "./LogInForm.module.css";
+import css from "./LogInForm.module.css";
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Field';
+import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
@@ -81,7 +80,7 @@ const LogInForm = () => {
   }));
 
   return (
-    <div>
+    <div className={css.cont}>
       <Grid container>
         <Grid item sm={4} xs={false}></Grid>
         <Grid item sm={4} xs={8}></Grid>

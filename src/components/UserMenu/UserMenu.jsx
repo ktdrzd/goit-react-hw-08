@@ -29,7 +29,7 @@ const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useSelector(selectAuth);
 
-  const handleClick = actions => {
+  const handleClick = () => {
     setLoad(true);
     dispatch(logOut())
       .unwrap()
@@ -45,10 +45,12 @@ const UserMenu = () => {
             secondary: '#fff',
           },
         });
-        actions.resetForm();
         setLoad(false);
       })
-      .catch(setLoad(false));
+      .catch(error => {
+        console.error('Logout failed:', error);
+        setLoad(false);
+      });
   };
 
   return (
