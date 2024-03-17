@@ -18,8 +18,8 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 const App = () => {
   const dispatch = useDispatch();
-  // const { isRefreshing } = selectAuth;
-  const isRefreshing = useSelector(selectAuth);
+
+  const {isRefreshing} = useSelector(selectAuth);
 
   useEffect(() => {
     dispatch(refresh());
