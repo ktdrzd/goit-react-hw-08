@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Suspense, lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
@@ -18,7 +18,8 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = selectAuth;
+  // const { isRefreshing } = selectAuth;
+  const isRefreshing = useSelector(selectAuth);
 
   useEffect(() => {
     dispatch(refresh());
